@@ -1,10 +1,8 @@
-[
-  {
-    "relation": ["delegate_permission/common.handle_all_urls"],
-    "target": {
-      "namespace": "android_app",
-      "package_name": "REPLACE_WITH_PACKAGE_ID_FROM_PWABUILDER",
-      "sha256_cert_fingerprints": ["REPLACE_WITH_SHA256_FROM_PWABUILDER"]
-    }
-  }
-]
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "com.ibgroup.app",
+        "sha256_cert_fingerprints": ["36:A8:25:3F:4E:F6:52:BA:19:7C:AE:E3:FE:0C:41:D9:A0:F2:62:18:1A:E7:D4:C8:E3:B1:97:9E:EA:B1:4B:54"]
+      }
+    }]
