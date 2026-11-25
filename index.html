@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>iBerry App</title>
+  <meta name="theme-color" content="#1565C0">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <style>
+    html, body { margin: 0; height: 100%; background: #fff; overflow: hidden; }
+    #app { position: fixed; inset: 0; width: 100%; height: 100%; border: 0; }
+    #loading {
+      position: fixed; inset: 0; display: flex; align-items: center; justify-content: center;
+      font-family: system-ui, sans-serif; color: #1565C0; background: #fff; transition: opacity .3s;
+    }
+    #loading.hide { opacity: 0; pointer-events: none; }
+  </style>
+</head>
+<body>
+  <div id="loading">กำลังโหลด…</div>
+  <iframe id="app"
+    src="https://script.google.com/a/macros/iberrygroup.com/s/AKfycbxZGbetSjAaxRmyXwu_2npXym0xONC1-Wi9yUtZKJEszQ3tBJZB-cpqUXXBQyA2Cso2/exec"
+    allow="camera; microphone; geolocation; clipboard-read; clipboard-write; fullscreen"
+    allowfullscreen></iframe>
+  <script>
+    document.getElementById('app').addEventListener('load', function () {
+      document.getElementById('loading').classList.add('hide');
+    });
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js');
+    }
+  </script>
+</body>
+</html>
